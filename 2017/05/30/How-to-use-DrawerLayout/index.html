@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -96,16 +96,16 @@
 <meta name="description" content="作者：Pantiy , 转载请注明出处。  什么是「DrawerLayout」？ DrawerLayout 是 Google 官方提供的一个原生 Android 组件，开发者可以使用该组件实现抽屉的效果，如下图所示。   1. 如何使用  让我们先来看一下 Google 官方的文档说明 ：To use a DrawerLayout, position your primary content vi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to use DrawerLayout">
-<meta property="og:url" content="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/index.html">
+<meta property="og:url" content="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/index.html">
 <meta property="og:site_name" content="Pantiy is me">
 <meta property="og:description" content="作者：Pantiy , 转载请注明出处。  什么是「DrawerLayout」？ DrawerLayout 是 Google 官方提供的一个原生 Android 组件，开发者可以使用该组件实现抽屉的效果，如下图所示。   1. 如何使用  让我们先来看一下 Google 官方的文档说明 ：To use a DrawerLayout, position your primary content vi">
-<meta property="og:image" content="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/drawerlayout_test.jpg">
-<meta property="og:image" content="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/drawertoggle.gif">
+<meta property="og:image" content="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/drawerlayout_test.jpg">
+<meta property="og:image" content="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/drawertoggle.gif">
 <meta property="og:updated_time" content="2017-07-14T03:44:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to use DrawerLayout">
 <meta name="twitter:description" content="作者：Pantiy , 转载请注明出处。  什么是「DrawerLayout」？ DrawerLayout 是 Google 官方提供的一个原生 Android 组件，开发者可以使用该组件实现抽屉的效果，如下图所示。   1. 如何使用  让我们先来看一下 Google 官方的文档说明 ：To use a DrawerLayout, position your primary content vi">
-<meta name="twitter:image" content="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/drawerlayout_test.jpg">
+<meta name="twitter:image" content="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/drawerlayout_test.jpg">
 
 
 
@@ -113,7 +113,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     motion: true,
@@ -133,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/"/>
+  <link rel="canonical" href="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/"/>
 
 
 
@@ -205,7 +205,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -215,7 +215,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://pantiy.cn/2017/05/31/How-to-use-DrawerLayout/">
+    <link itemprop="mainEntityOfPage" href="http://pantiy.cn/2017/05/30/How-to-use-DrawerLayout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pantiy">
@@ -285,9 +285,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-31T03:22:39+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-30T19:22:39+08:00">
                 2017-05-30
               </time>
             
@@ -326,7 +326,7 @@
 <blockquote>
 <p>什么是「DrawerLayout」？ DrawerLayout 是 Google 官方提供的一个原生 Android 组件，开发者可以使用该组件实现抽屉的效果，如下图所示。</p>
 </blockquote>
-<p><img src="/2017/05/31/How-to-use-DrawerLayout/drawerlayout_test.jpg" alt="drawerlayout_test"></p>
+<p><img src="/2017/05/30/How-to-use-DrawerLayout/drawerlayout_test.jpg" alt="drawerlayout_test"></p>
 <p><strong>1. 如何使用</strong></p>
 <blockquote>
 <p>让我们先来看一下 Google 官方的文档说明 ：<br><em>To use a DrawerLayout, position your primary content view as the first child with width and height of match_parent and no layout_gravity&gt;. Add drawers as child views after the main content view and set the layout_gravity appropriately. Drawers commonly use match_parent for height with a fixed width.</em><br><br>意思就是 :<br><em>使用 DrawerLayout 的时候应当只包含两个子控件，一个子控件作为主要视图展示未呼出抽屉时的界面，另一个子控件作为侧滑视图展示呼出抽屉时的界面。并且作为主视图的子控件的 layout_width 和 layout_height 属性都应设置为 match_parent，并且不包含 layout_gravity 属性；作为抽屉的子控件应当设置合适的 layout_gravity 属性（一般设置为 Start 默认抽屉在左边，也可以设置为 Right 或者 Left 指定抽屉的位置），除此之外抽屉的 layout_height 属性应当设置为 match_parent ，其 layout_width 属性一般自行设置为一个合适的值，若也设置为 match_parent 则会完全遮挡主视图，也就体现不出「抽屉」的效果。</em></p>
@@ -349,7 +349,7 @@
 <blockquote>
 <p>ActionBarDrawerToggle 是 Google 官方提供的一个类，它实现了 DrawerLayout.DrawerListener 接口（DrawerLayout.DrawerListener 接口定义在 DrawerLayout 类中，它能够监听 DrawerLayout 当前的状态），不仅如此 ActionBarDrawerToggle 在创建后还会将 ActionBar 的 Up Button 设置为三个横条的样式并自带动画效果，下面是效果图。</p>
 </blockquote>
-<p><img src="/2017/05/31/How-to-use-DrawerLayout/drawertoggle.gif" alt="drawertoggle"></p>
+<p><img src="/2017/05/30/How-to-use-DrawerLayout/drawertoggle.gif" alt="drawertoggle"></p>
 <p>这是 ActionBarDrawerToggle 的一个构造器，也是我们将要使用到的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout,</div><div class="line">            @StringRes int openDrawerContentDescRes,</div><div class="line">            @StringRes int closeDrawerContentDescRes) &#123;</div><div class="line">        this(activity, null, drawerLayout, null, openDrawerContentDescRes,</div><div class="line">                closeDrawerContentDescRes);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>接下来放出 Activity 的代码，稍后会做说明：</p>
@@ -467,7 +467,7 @@
                alt="Pantiy" />
           <p class="site-author-name" itemprop="name">Pantiy</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">进击的程序猿</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -476,7 +476,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -602,6 +602,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
