@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="作者：Pantiy，转载请注明出处  这篇文章分享一个不需要数据线就可以进行调试的方法，再也不用拖着数据线调试啦。  准备工作：    USB 数据线一根（用于第一次配置） 安装了 ADB 的 PC（Android Studio 已集成） 保证 PC 和 Android 设备连接在同一 WiFi 下  步骤如下： 1. 打开 cmd 切换到 ~/sdk/paltform-tools/ 目录下">
-<meta name="keywords" content="Android">
+<meta name="description" content="本文作者 Pantiy , 转载请注明出处  SQLite 是一种轻量级的数据库，实现了大多数 SQL 标准。它使用动态的、弱类型的 SQL 语法。在本地/客户端存储数据的常见选择。在 Android 的开发过程中，与 SQLite 打交道可以说是不可避免的。  常规的使用方法   通常在使用过程中需要定义以下3种类：    XXXDatabase XXXSQLiteOpenHelper XXXC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android 无线调试">
-<meta property="og:url" content="http://pantiy.cn/2017/05/29/Android-无线调试/index.html">
+<meta property="og:title" content="Andorid 中 SQLite 的简单使用">
+<meta property="og:url" content="http://pantiy.cn/2017/07/25/Android 中 SQLite 的简单使用/index.html">
 <meta property="og:site_name" content="Pantiy">
-<meta property="og:description" content="作者：Pantiy，转载请注明出处  这篇文章分享一个不需要数据线就可以进行调试的方法，再也不用拖着数据线调试啦。  准备工作：    USB 数据线一根（用于第一次配置） 安装了 ADB 的 PC（Android Studio 已集成） 保证 PC 和 Android 设备连接在同一 WiFi 下  步骤如下： 1. 打开 cmd 切换到 ~/sdk/paltform-tools/ 目录下">
-<meta property="og:updated_time" content="2018-10-09T09:07:58.315Z">
+<meta property="og:description" content="本文作者 Pantiy , 转载请注明出处  SQLite 是一种轻量级的数据库，实现了大多数 SQL 标准。它使用动态的、弱类型的 SQL 语法。在本地/客户端存储数据的常见选择。在 Android 的开发过程中，与 SQLite 打交道可以说是不可避免的。  常规的使用方法   通常在使用过程中需要定义以下3种类：    XXXDatabase XXXSQLiteOpenHelper XXXC">
+<meta property="og:updated_time" content="2018-10-11T06:57:45.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 无线调试">
-<meta name="twitter:description" content="作者：Pantiy，转载请注明出处  这篇文章分享一个不需要数据线就可以进行调试的方法，再也不用拖着数据线调试啦。  准备工作：    USB 数据线一根（用于第一次配置） 安装了 ADB 的 PC（Android Studio 已集成） 保证 PC 和 Android 设备连接在同一 WiFi 下  步骤如下： 1. 打开 cmd 切换到 ~/sdk/paltform-tools/ 目录下">
+<meta name="twitter:title" content="Andorid 中 SQLite 的简单使用">
+<meta name="twitter:description" content="本文作者 Pantiy , 转载请注明出处  SQLite 是一种轻量级的数据库，实现了大多数 SQL 标准。它使用动态的、弱类型的 SQL 语法。在本地/客户端存储数据的常见选择。在 Android 的开发过程中，与 SQLite 打交道可以说是不可避免的。  常规的使用方法   通常在使用过程中需要定义以下3种类：    XXXDatabase XXXSQLiteOpenHelper XXXC">
 
 
 
@@ -119,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://pantiy.cn/2017/05/29/Android-无线调试/"/>
+  <link rel="canonical" href="http://pantiy.cn/2017/07/25/Android 中 SQLite 的简单使用/"/>
 
 
 
 
 
-  <title>Android 无线调试 | Pantiy</title>
+  <title>Andorid 中 SQLite 的简单使用 | Pantiy</title>
   
 
 
@@ -242,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pantiy.cn/2017/05/29/Android-无线调试/">
+    <link itemprop="mainEntityOfPage" href="http://pantiy.cn/2017/07/25/Android 中 SQLite 的简单使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pantiy">
@@ -259,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android 无线调试</h1>
+          <h1 class="post-title" itemprop="name headline">Andorid 中 SQLite 的简单使用</h1>
         
 
         <div class="post-meta">
@@ -271,8 +270,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-29T02:18:04+08:00">
-                2017-05-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-25T15:39:17+08:00">
+                2017-07-25
               </time>
             
 
@@ -309,28 +308,39 @@
       
 
       
-        <p><em>作者：Pantiy，转载请注明出处</em></p>
+        <p><br><em>本文作者 Pantiy , 转载请注明出处</em></p>
 <blockquote>
-<p>这篇文章分享一个不需要数据线就可以进行调试的方法，再也不用拖着数据线调试啦。</p>
+<p>SQLite 是一种轻量级的数据库，实现了大多数 SQL 标准。它使用动态的、弱类型的 SQL 语法。在本地/客户端存储数据的常见选择。在 Android 的开发过程中，与 SQLite 打交道可以说是不可避免的。</p>
 </blockquote>
-<p>准备工作：  </p>
+<p><strong>常规的使用方法</strong>  </p>
+<p>通常在使用过程中需要定义以下3种类：  </p>
 <ul>
-<li>USB 数据线一根（用于第一次配置）</li>
-<li>安装了 ADB 的 PC（Android Studio 已集成）</li>
-<li>保证 PC 和 Android 设备连接在同一 WiFi 下</li>
+<li>XXXDatabase</li>
+<li>XXXSQLiteOpenHelper</li>
+<li>XXXCursorWrapper  </li>
 </ul>
-<p>步骤如下：</p>
-<p><strong>1. 打开 cmd 切换到 ~/sdk/paltform-tools/ 目录下</strong>  </p>
-<p>例如，我的 sdk 安装在 /e/Android/ 目录下，则通过以下代码切换目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /d d:/Android/sdk/platform-tools</div></pre></td></tr></table></figure></p>
-<p><strong>2. 使用 USB 数据线将手机连接至电脑</strong></p>
-<p><strong>3. 开始设置</strong>  </p>
-<p>第一步，设置手机无线监听端口，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb tcpip 5555</div></pre></td></tr></table></figure></p>
-<p>第二步，将手机与电脑连接至同一 WiFi 下，并在手机上查看当前 IP 地址  </p>
-<p>第三步，将电脑无线连接至手机  </p>
-<p>例如，我的手机 IP 地址是 192.168.31.2 ，则输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb connect 192.168.31.2:5555</div></pre></td></tr></table></figure></p>
-<p>现在就可以拔下数据线，开始愉快地无线调试了。</p>
-<hr>
-<p><em>欢迎关注我的个人微信订阅号「 PantiyShare 」，我会在上面不定时地分享一些原创文章，不只有技术文章呦。</em></p>
+<p><strong>1.XXXDatabase</strong>  </p>
+<p>这个类用于定义在 SQLite 中所需要创建的表单的 “名称”、“字段” 。例如，需要为班内同学的 “姓名” 、“学号” 进行储存，则创建一个名为 ClassmateInfoDatabase 的静态类，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public final class ClassmateInfoDatabase &#123;</div><div class="line"></div><div class="line">    public static final String NAME = &quot;classmate_info&quot;;</div><div class="line"></div><div class="line">    public static String getSql() &#123;</div><div class="line">        return &quot;create table &quot; + NAME + &quot;(&quot; +</div><div class="line">                Table.STUDENT_NUM + &quot;,&quot; +</div><div class="line">                Table.STUDENT_NAME + &quot;)&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static final class Table &#123;</div><div class="line">        public static final String STUDENT_NUM = &quot;student_num&quot;;</div><div class="line">        public static final String STUDENT_NAME = &quot;student_name&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>NAME 定义了表单的名字</li>
+<li>Table 定义了表单中的各个字段   </li>
+</ul>
+<p>为什么需要用一个类来进行定义？因为表单的名称、字段都会在操作数据库时频繁被使用，这样做是为了最大程度地进行复用以及日后的维护。  </p>
+<p><strong>2.XXXSQLiteOpenHelper</strong>  </p>
+<p>这个类与帮助你获取 Database 实例对数据库进行操作，这个类需要继承自 SQLiteOpenHelper 。例如，为上述的 ClassmateInfoDatabase 创建一个名为 ClassmateInfoSQLiteOpenHelper 类，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class ClassmateInfoDatabaseHelper extends SQLiteOpenHelper &#123;</div><div class="line"></div><div class="line">    private static final String DATABASE_NAME = &quot;classmateInfo.db&quot;;</div><div class="line">    private static final int VERSION = 1;</div><div class="line"></div><div class="line">    public ClassmateInfoDatabaseHelper(Context context) &#123;</div><div class="line">        super(context, DATABASE_NAME, null, VERSION);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onCreate(SQLiteDatabase db) &#123;</div><div class="line">        db.execSQL(ClassmateInfoDatabase.getSql());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>DATABASE_NAME 顾名思义，表示数据库的名称</li>
+<li>VERSION 代表当前数据库的版本号</li>
+<li>onCreate()<br>该方法会在第一次创建数据库时进行调用，db.execSQL(String sql) 方法所需要的参数就是标准的 SQL 语句，用于创建表单</li>
+<li>onUpgrade()<br>该方法会在升级数据库时进行调用。例如，你发布的下一个 App 版本中 VERSION 值变大，表示有新版本数据库，则系统会调用该方法</li>
+</ul>
+<p><strong>3.XXXCursorWrapper</strong>  </p>
+<p>这个类用于将数据库查询的结果包装成所定义的 POJO 类，用于数据填充，该类需要继承自 CursorWrapper 类。例如，创建一个名为 ClassmateInfoCursorWrapper 的类，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class ClassmateInfoCursorWrapper extends CursorWrapper &#123;</div><div class="line"></div><div class="line">    public ClassmateInfoCursorWrapper(Cursor cursor) &#123;</div><div class="line">        super(cursor);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public ClassmateInfo getClassmateInfo() &#123;</div><div class="line"></div><div class="line">        String studentNum = getString(getColumnIndex(ClassmateInfoDatabase.Table.STUDENT_NUM));</div><div class="line">        String studentName = getString(getColumnIndex(ClassmateInfoDatabase.Table.STUDENT_NAME));</div><div class="line"></div><div class="line">        return new ClassmateInfo(studentNum, studentName);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>getClassmateInfo()<br>该方法是自定义的，用于将数据库查询的结果转换成所需的 POJO 类的实例</li>
+</ul>
+<p><strong>4.总结</strong>  </p>
+<p>以上内容展示了实现 SQLite 本地化储存所必须的3个类。XXXDatabase 类中对表单的名称、字段进行了定义；XXXSQLiteOpenHelper 类实现了数据库的初始化创建，以及实例化 SQLiteDatabase 对象，用于操作数据库；XXXCursorWrapper 类实现了将数据库查询结果转换成 POJO 类的功能。  </p>
 
       
     </div>
@@ -346,12 +356,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-        </div>
-      
 
       
       
@@ -361,14 +365,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/05/30/侧滑布局 DrawerLayout 的使用/" rel="next" title="侧滑布局 DrawerLayout 的使用">
+                <i class="fa fa-chevron-left"></i> 侧滑布局 DrawerLayout 的使用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/30/侧滑布局 DrawerLayout 的使用/" rel="prev" title="侧滑布局 DrawerLayout 的使用">
-                侧滑布局 DrawerLayout 的使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/26/从Uri获取文件路径/" rel="prev" title="从Uri获取文件路径">
+                从Uri获取文件路径 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
